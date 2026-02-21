@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Plateforme Égalité des Chances — MVP (France)</title>
+  <meta name="description" content="Accéder aux bonnes ressources, même sans réseau. Orientation, opportunités, méthodes et outils pour avancer." />
+
+  <!-- Open Graph (aperçu WhatsApp / LinkedIn) -->
+  <meta property="og:title" content="Plateforme Égalité des Chances — MVP (France)" />
+  <meta property="og:description" content="Accéder aux bonnes ressources, même sans réseau. Orientation, opportunités, méthodes et outils pour avancer." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --text:#e8eefc;
+      --muted:#b8c7f0;
+      --line:rgba(255,255,255,.10);
+      --btn:#3b82f6;
+      --btn2:#22c55e;
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(800px 300px at 20% 10%, rgba(59,130,246,.22), transparent 60%),
+        radial-gradient(800px 300px at 80% 0%, rgba(34,197,94,.16), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+      padding:14px 0 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background:linear-gradient(135deg, var(--btn), var(--btn2));
+      box-shadow:0 0 0 4px rgba(59,130,246,.12);
+    }
+    .toplinks{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      border:1px solid var(--line);
+      padding:8px 12px; border-radius:999px;
+      color:var(--muted);
+      background:rgba(255,255,255,.04);
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:10px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(26px, 3.2vw, 44px);
+      line-height:1.08;
+      letter-spacing:-.4px;
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size: clamp(14px, 1.4vw, 18px);
+    }
+    .cta{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-weight:650;
+      transition: transform .08s ease, opacity .2s ease;
+      cursor:pointer;
+      min-width: 210px;
+    }
+    .btn:hover{transform: translateY(-1px); opacity:.95}
+    .btn.primary{background:var(--btn)}
+    .btn.secondary{background:rgba(255,255,255,.06); border-color:var(--line); color:var(--text)}
+    .btn.green{background:var(--btn2)}
+    .mini{
+      display:grid; gap:10px;
+    }
+    .kpi{
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+    .kpi .box{
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+    }
+    .kpi .n{font-size:22px; font-weight:800}
+    .kpi .t{color:var(--muted); font-size:12px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+    h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+    .p{color:var(--muted); margin:0; font-size:14px}
+    .section{margin-top:18px}
+    footer{
+      margin:22px 0 6px;
+      color:rgba(232,238,252,.65);
+      font-size:12px;
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
+    .smalllink{color:rgba(232,238,252,.75); text-decoration:underline; text-underline-offset:3px}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .btn{min-width: 100%}
+      .kpi{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Égalité des Chances — MVP (France)</span>
+      </div>
+
+      <div class="toplinks">
+        <a class="pill" href="#comment">Comment ça marche</a>
+        <a class="pill" href="#ressources">Ressources</a>
+        <a class="pill" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main class="hero">
+      <!-- Bloc principal -->
+      <section class="card">
+        <h1>Accéder aux bonnes ressources, même sans réseau.</h1>
+        <p class="sub">
+          Un MVP simple : orientation, méthodes, opportunités et ressources pratiques pour avancer
+          (études, emploi, alternance, démarches, outils).
+        </p>
+
+        <div class="cta">
+          <!-- ✅ Remplace ce lien si tu veux pointer vers une page Notion spécifique -->
+          <a class="btn primary" href="https://buttercup-sight-745.notion.site/" target="_blank" rel="noopener">
+            Accéder aux ressources (Notion)
+          </a>
+
+          <!-- ✅ Remplace le lien ci-dessous par ton Google Form / WhatsApp / Linktree -->
+          <a class="btn green" href="https://forms.gle/TON_FORM_ICI" target="_blank" rel="noopener">
+            Rejoindre / S’inscrire
+          </a>
+
+          <a class="btn secondary" href="#comment">Voir le fonctionnement</a>
+        </div>
+
+        <div class="kpi">
+          <div class="box">
+            <div class="n">MVP</div>
+            <div class="t">Version test (France)</div>
+          </div>
+          <div class="box">
+            <div class="n">Gratuit</div>
+            <div class="t">Accès public + ressources</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bloc latéral -->
+      <aside class="card mini">
+        <h2>Pour qui ?</h2>
+        <p class="p">• Étudiants & jeunes diplômés</p>
+        <p class="p">• Nouveaux arrivants en France</p>
+        <p class="p">• Profils sans réseau / sans modèle</p>
+
+        <hr style="border:0;border-top:1px solid var(--line);width:100%;margin:10px 0" />
+
+        <h2>Objectif</h2>
+        <p class="p">
+          Réduire le hasard : donner une méthode + des ressources + un point de départ concret.
+        </p>
+
+        <hr style="border:0;border-top:1px solid var(--line);width:100%;margin:10px 0" />
+
+        <h2>À venir</h2>
+        <p class="p">• Base métiers + fiches pratiques</p>
+        <p class="p">• Parcours guidés (0→1)</p>
+        <p class="p">• Ateliers & accompagnement</p>
+      </aside>
+    </main>
+
+    <section class="section" id="comment">
+      <div class="grid">
+        <div class="card">
+          <h2>1) Clarifier</h2>
+          <p class="p">Ton profil, ton contexte, tes contraintes, ton objectif à 3–6 mois.</p>
+        </div>
+        <div class="card">
+          <h2>2) Structurer</h2>
+          <p class="p">Méthode simple : plan d’action, priorités, ressources utiles, routines.</p>
+        </div>
+        <div class="card">
+          <h2>3) Accéder</h2>
+          <p class="p">Opportunités + modèles + outils (CV, mails, entretiens, démarches).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ressources">
+      <div class="card">
+        <h2>Ressources (Notion)</h2>
+        <p class="p">
+          Toutes les ressources sont centralisées sur Notion : guides, checklists, modèles, liens utiles.
+        </p>
+        <div class="cta" style="margin-top:14px">
+          <a class="btn primary" href="https://buttercup-sight-745.notion.site/" target="_blank" rel="noopener">
+            Ouvrir la base Notion
+          </a>
+          <a class="btn secondary" href="https://forms.gle/TON_FORM_ICI" target="_blank" rel="noopener">
+            Proposer une ressource / demander un ajout
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="card">
+        <h2>Contact</h2>
+        <p class="p">
+          Tu peux me contacter ici :
+          <br />• Email : <a class="smalllink" href="mailto:tonemail@exemple.com">tonemail@exemple.com</a>
+          <br />• LinkedIn : <a class="smalllink" href="https://www.linkedin.com/in/TON_PROFIL/" target="_blank" rel="noopener">Mon profil</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> — Égalité des Chances (MVP France)</div>
+      <div>
+        <a class="smalllink" href="https://buttercup-sight-745.notion.site/" target="_blank" rel="noopener">Notion</a>
+        &nbsp;·&nbsp;
+        <a class="smalllink" href="#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
