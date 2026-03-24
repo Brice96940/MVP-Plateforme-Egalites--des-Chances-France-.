@@ -5,6 +5,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+<<<<<<< HEAD
   <url>
     <loc>https://brice96940.github.io/AEC-France/pages/cv-sans-experience.html</loc>
     <changefreq>weekly</changefreq>
@@ -20,4 +21,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+=======
+>>>>>>> origin/dev
 </urlset>
